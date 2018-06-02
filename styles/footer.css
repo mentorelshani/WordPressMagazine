@@ -1,0 +1,206 @@
+.footer {
+	background: rgb(8, 36, 46);
+	width: calc( 100% - 60px);
+	float: left;
+	padding:  35px 30px;
+}
+
+.footer__section {
+	width: 33.3%;
+	float: left;
+}
+
+.link {
+
+}
+
+.misc, .links{
+	width: 50%;
+	float: left;
+}
+
+.misc__list {
+ 	
+}
+
+.misc__list--title, .links__list--title{
+	padding-top: 3px;
+	font-size: 20px;
+	float: left;
+	padding-left: 3px;
+}
+
+.misc__list--icon, .links__list--icon {
+	float: left;
+}
+
+.misc__list--item, .links__list--item {
+	width: 70%;
+	list-style-type: none;
+	border-bottom:1px solid rgb(44, 59, 68);
+	padding:  7px;
+
+	float: left;
+
+}
+
+.links {
+
+}
+
+.links__list {
+	float: left;
+}
+
+.items {
+
+}
+
+.items> .item__title  {
+
+}
+
+.items> .item__body {
+	height: 50px;
+	width: calc( 100% - 70px);
+	float: left;
+	margin-left: 30px;
+	margin-right: 30px;
+	padding: 5px;
+	border-top: 1px solid rgb(44, 59, 68);
+	border-bottom:1px solid rgb(44, 59, 68);
+
+}
+.item__body:hover {
+	background: rgb(13, 29, 37);
+}
+
+.items> .item__title, .messages> .messages__title {
+	width: calc( 100% - 60px);
+	margin-left: 30px;
+	margin-right: 30px;
+	/* padding-bottom:  10px; */
+	padding: 7px;
+	float: left;
+}
+
+.items> .item__title> .item__title--name, .messages> .messages__title> .messages__title--name {
+	padding-top: 3px;
+	font-size: 20px;
+	float: left;
+	padding-left: 3px;
+}
+
+.items> .item__title> .item__title--icon, .messages> .messages__title> .messages__title--icon {
+	height: 29px;
+	float: left;
+}
+
+.items> .item__body> .item__content {
+	float: left;
+	width: 100%;
+	padding-bottom: 10px;
+	/* height: 40px; */
+}
+
+.items> .item__body> .item__postedBy {
+	float: left;
+	font-size: 12px;
+
+	/* height: 40px; */
+}
+
+.items> .item__body> .item__comments--number {
+	float: right;
+	font-size: 12px;
+	/* height: 40px; */
+}
+
+
+.messages {
+}
+
+.element {
+	float: left;
+	width: calc( 100% - 60px);
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 20px;
+}
+
+.element> .name {
+	width: 100%;
+	float: left;
+}
+
+.element> .value {
+	width: 100%;
+	float: left;
+	height: 38px;
+	padding-left: 5px;
+	background: rgb(19, 74, 101);
+	border-radius: 5px;
+	border: 1px solid transparent;
+	outline: none;
+	font-size: 16px;
+	color: white;
+
+}
+
+.element> .value__textarea {
+	width: 100%;
+	float: left;
+	background: rgb(19, 74, 101);
+	resize: none;
+	border-radius: 5px;
+	border: 1px solid transparent;
+	height: 100px;
+	outline: none;
+	font-size: 16px;
+	color: white;
+	padding-left: 5px;
+
+}
+
+.btn__submit {
+	float: left;
+	width: 70px;
+	height: 38px;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 10px;
+	background: rgb(31, 31, 31);
+	border-radius: 4px;
+	border: 1px solid black;
+	font-size: 17px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+
+
+.footer__copyright {
+	background: rgb(0, 17, 26);
+	width: calc( 100% - 20px);
+	float: left;
+	height: 40px;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.footer__copyright--text {
+	float: left;
+	width: auto;
+}
+
+.footer__copyright--sn {
+	float: right;
+	width: auto;
+}
+
+.footer__copyright--sn>.footer__copyright--icon {
+	float: left;
+	cursor: pointer;
+	margin: 4px;
+}

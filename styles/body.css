@@ -1,0 +1,118 @@
+.body {
+	width: calc( 100% - 60px );
+	padding: 35px 30px;
+	float: left;
+    background: linear-gradient(to right, rgb(9, 36, 50), rgb(55, 78, 90), rgb(10, 37, 51));
+    /* height: 600px; */
+}
+
+.article {
+	width: calc( 70% - 30px );
+	float: left;
+	margin-right: 30px;
+}
+
+.article> .main__article {
+	width: 100%;
+	float: left;
+}
+
+.article> .main__article> .main__article--title {
+	float: left;
+	background: linear-gradient(to bottom, rgb(23, 23, 23), black);
+	padding-left: 15px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 15px;
+	font-size: 24px;
+	margin-bottom: -35px;
+	margin-left: -8px;
+	position: relative;
+}
+
+.main__article::before {
+	content: "";
+	margin-left: -8px;
+	margin-top: 50px;
+	float: left;
+	width: 0;
+	height: 0;
+	border-left: 0px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 15px solid black;
+    transform: rotate(180deg);
+}
+
+.article> .main__article> .main__article--photo {
+	width: calc( 100% - 50px);
+	/* padding: 25px; */
+	float: left;
+	border: 25px solid white;
+}
+
+.top__article--left, .top__article--right{
+	float: left;
+	width: calc( 50% - 79px );
+	margin-top: 25px;
+	background: white;
+	padding:  15px 30px;
+	color: black;
+}
+
+.top__article--right {
+	margin-left: 38px !important;
+	float: right;
+}
+
+.article__title {
+	float: left;
+	width: 100%;
+	font-size: 25px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.article__photo {
+	width: 100%;
+	float: left;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.article__photo> img {
+	object-fit : cover;
+	float: left;
+	width: 100%;
+	height: 80px;
+}
+
+.article__discription {
+	float: left;
+	width: 100%;
+	font-size: 15px;
+	color: rgb(80, 123, 141);
+	font-weight: 1000;
+}
+
+.article__content {
+	float: left;
+	width: 100%;
+	padding: 15px 0px;
+}
+
+.article__content--more {
+	float: left;
+	width: 100%;
+	font-size: 15px;
+	color: rgb(80, 123, 141);
+	font-weight: 1000;
+	cursor: pointer;
+}
+.article__content--more:hover {
+	text-decoration: underline;
+}
+
+.aside {
+	width: 30%;
+	float: left;
+}
