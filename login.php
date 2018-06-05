@@ -12,7 +12,7 @@
 </head>
 <body>
 	<form method="POST" action="/login.php">
-		Username: <input type="text" name="username" placeholder="username">
+		Username: <input type="text" name="username" placeholder="username" required>
 		<br>
 		Password: <input type="password" name="password" placeholder="password">
 		<input type="submit" name="">
