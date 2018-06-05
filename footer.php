@@ -5,7 +5,7 @@
 				<li class="misc__list--item">
 					<img src="./img/StarIcon.png" alt="" class="misc__list--icon">
 					<span class="misc__list--title">Misc.</span></li>
-				<li class="misc__list--item">Log in</li>
+				<li class="misc__list--item"><a href="login.php">Log in</a></li>
 				<li class="misc__list--item">Privacy of Policy</li>
 				<li class="misc__list--item">Get in touch</li>
 			</ul>
@@ -78,13 +78,5 @@
 			</div>
 			<input type="submit" value="Submit" class="btn__submit">
 		</form>
-	</div>
-</div>
-<div class="footer__copyright">
-	<span class="footer__copyright--text">@2012 PelFusion</span>
-	<div class="footer__copyright--sn">
-		<img src="./img/facebook.png" alt="Fb" class="footer__copyright--icon">
-		<img src="./img/twitter.png" alt="Tw" class="footer__copyright--icon">
-		<img src="./img/RSS.png" alt="Rss" class="footer__copyright--icon">
 	</div>
 </div>

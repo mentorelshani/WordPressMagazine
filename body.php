@@ -11,7 +11,7 @@
 				<div class="article__photo">
 					<img src="./img/Layer13.png" alt="">
 				</div>
-				<span class="article__discription">January 12ND - By Ferman</span>
+				<span class="article__description">January 12ND - By Ferman</span>
 				<span class="article__content">
 					LeBron James records just the 2nd 50+ pt. #NBAFinals game since 1970 (Michael Jordan, 1993), and just the 6th overall.
 					LeBron James records just the 2nd 50+ pt. #NBAFinals game since 1970 (Michael Jordan);
@@ -26,7 +26,7 @@
 				<div class="article__photo">
 					<img src="./img/Layer13.png" alt="">
 				</div>
-				<span class="article__discription">January 12ND - By Ferman</span>
+				<span class="article__description">January 12ND - By Ferman</span>
 				<span class="article__content">
 					LeBron James records just the 2nd 50+ pt. #NBAFinals game since 1970 (Michael Jordan, 1993), and just the 6th overall.
 					LeBron James records just the 2nd 50+ pt. #NBAFinals game since 1970 (Michael Jordan);
@@ -41,7 +41,7 @@
 				<div class="article__photo">
 					<img src="./img/Layer13.png" alt="">
 				</div>
-				<span class="article__discription">January 12ND - By Ferman</span>
+				<span class="article__description">January 12ND - By Ferman</span>
 				<span class="article__content">
 					LeBron James records just the 2nd 50+ pt. #NBAFinals game since 1970 (Michael Jordan, 1993), and just the 6th overall.
 					LeBron James records just the 2nd 50+ pt. #NBAFinals game since 1970 (Michael Jordan);
@@ -56,7 +56,7 @@
 				<div class="article__photo">
 					<img src="./img/Layer13.png" alt="">
 				</div>
-				<span class="article__discription">January 12ND - By Ferman</span>
+				<span class="article__description">January 12ND - By Ferman</span>
 				<span class="article__content">
 					LeBron James records just the 2nd 50+ pt. #NBAFinals game since 1970 (Michael Jordan, 1993), and just the 6th overall.
 					LeBron James records just the 2nd 50+ pt. #NBAFinals game since 1970 (Michael Jordan);
@@ -87,16 +87,28 @@
 
 		<div class="filter__article">
 			<ol class="filter__article--menu">
-			    <li class="filter__article--menu_item"></li>
-			    <li class="filter__article--menu_item"></li>
-			    <li class="filter__article--menu_item"></li>
+			    <li class="filter__article--menu_item">Popular</li>
+			    <li class="filter__article--menu_item">Latest</li>
+			    <li class="filter__article--menu_item">Comments</li>
 			</ol>
 
 			<div class="filter__articles">
 				<div class="filter__articles--item">
-					<span class="filter__articles--item_title"></span>
-					<img src="" alt="" class="filter__articles--item_photo">
-					<span class="filter__articles--item_message"></span>
+					<span class="filter__articles--item_title">Creative 404 Error Pages</span>
+					<div class="filter__articles--item_photo">
+						<img src="./img/Layer18.png" alt="">
+					</div>
+					<span class="filter__articles--item_message">Ai publikon shpesh video satirike, përmes së cilave rrëmben.</span>
+				</div>
+				
+				<div class="horizontal__line"></div>
+
+				<div class="filter__articles--item">
+					<span class="filter__articles--item_title">Creative 404 Error Pages</span>
+					<div class="filter__articles--item_photo">
+						<img src="./img/Layer18.png" alt="">
+					</div>
+					<span class="filter__articles--item_message">Ai publikon shpesh video satirike, përmes së cilave rrëmben.</span>
 				</div>
 			</div>
 		</div>
@@ -118,9 +130,9 @@
 		</div>
 
 		<div class="last__video">
-			<span class="discription">Laters videos</span>
+			<span class="description">Laters videos</span>
 			<div class="video">
-				<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/ApUl3Ops69M?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+				<div style="position:relative;height:100px;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/ApUl3Ops69M?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 			</div>
 		</div>
 	</div>

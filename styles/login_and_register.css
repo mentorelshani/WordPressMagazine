@@ -1,0 +1,31 @@
+.login, .register{
+	width: 40%;
+	float: left;
+	padding-left: 30%;
+	padding-right: 30%;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: black;
+	background: linear-gradient(to right, rgb(9, 36, 50), rgb(55, 78, 90), rgb(10, 37, 51));
+}
+
+.login__body, .register__body {
+	width: 100%;
+	float: left;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.login__body> .element, .register__body> .element{
+	margin-top: 30px;
+	margin-bottom: 0px;
+	font-size: 20px;
+	font-weight: 500;
+
+}
+
+.login__body> .btn__submit, .register__body> .btn__submit {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-weight: 500;
+}
