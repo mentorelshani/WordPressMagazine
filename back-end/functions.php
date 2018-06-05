@@ -71,7 +71,10 @@
 
 		$category = $_GET['category'];
 
-		$query = mysqli_query($conn,"SELECT * FROM articles WHERE id in (SELECT a.article_id FROM categories c inner join articles_categories a on a.category_id = c.id WHERE c.name = '$category')");
+		$query = mysqli_query($conn,"SELECT a.*, u.username
+		 from articles a 
+		 inner join users u on u.id = a.user_id
+		 WHERE a.id in (SELECT ac.article_id FROM categories c inner join articles_categories ac on ac.category_id = c.id WHERE c.name = '$category')");
 
 		if (mysqli_num_rows($query)) {
 			while ($row = mysqli_fetch_assoc($query)) {
@@ -178,6 +181,30 @@
 				print_r($row);
 			}
 		}
+	}
+
+	function addComment($conn){
+
+		$user_id = $_SESSION['user']['id'];
+		$article_id = $_POST['article_id'];
+		$comment = $_POST['comment'];
+		$created_at = date("Y-m-d h:i:s");
+
+		mysqli_query($conn, "INSERT INTO comments (user_id,article_id,comment,created_at) VALUES ($user_id,$article_id,'$comment','$created_at');");
+	}
+
+	function register($conn){
+
+		$username = $_POST['username'];
+		$email = $_POST['email'];
+		$password = $_POST['password'];
+		$role = "User";
+		$hash_password = password_hash($password,2);
+		$created_at = date("Y-m-d h:i:s");
+
+		mysqli_query($conn, "INSERT INTO users (username,email,hash_password,created_at,role) VALUES ('$username','$email','$hash_password','$created_at','$role');");
+
+		login($conn);
 	}
 
 ?>
