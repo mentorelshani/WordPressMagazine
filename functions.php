@@ -14,25 +14,13 @@
 
 	function getArticles($conn){
 
-		$query = 'SELECT * from v_articles ORDER BY created_at LIMIT 5';
+		$asd = mysqli_query($conn,'SELECT * from articles');
 
-		$result = mysqli_query($conn, $query);
-
-		while($r = mysqli_fetch_assoc($result)) {
-		    $rows[] = $r;
+		if (mysqli_num_rows($asd)) {
+			while ($row = mysqli_fetch_assoc($asd)) {
+				print_r($row);
+			}
 		}
-		print_r(json_encode($rows));
-	}
-
-	function searchArticles($conn){
-
-		$text = $_GET['text'];
-
-		$query = "SELECT * FROM articles where title like '$text' or body like '$text' order by created_at;";
-		while($r = mysqli_fetch_assoc($result)) {
-		    $rows[] = $r;
-		}
-		print_r(json_encode($rows));
 	}
 
 	function getTwoArticles($conn){
@@ -44,57 +32,55 @@
 		else 
 			$param = "comments";
 
-		$query = "SELECT * from v_articles order by $param desc limit 2";
+		$asd = mysqli_query($conn, "SELECT * from v_articles order by $param desc limit 2");
 
-		$result = mysqli_query($conn, $query);
-
-		while($r = mysqli_fetch_assoc($result)) {
-		    $rows[] = $r;
+		if (mysqli_num_rows($asd)) {
+			while ($row = mysqli_fetch_assoc($asd)) {
+				print_r($row);
+			}
 		}
-		print_r(json_encode($rows));
 	}
 
 	function getArticle($conn){
 
 		$id = $_GET['id'];
 
-		$query = "SELECT * from articles WHERE id = $id";
+		$asd = mysqli_query($conn, "SELECT * from articles WHERE id = $id");
 
-		$result = mysqli_query($conn, $query);
-
-		while($r = mysqli_fetch_assoc($result)) {
-		    $rows[] = $r;
+		if (mysqli_num_rows($asd)) {
+			while ($row = mysqli_fetch_assoc($asd)) {
+				print_r($row);
+			}
 		}
-		print_r(json_encode($rows));
 	}
 
 	function getComments($conn){
 
 		$article_id = $_GET['article_id'];
-		$query = "SELECT * from comments WHERE article_id = $article_id";
 
-		$result = mysqli_query($conn, $query);
+		$asd = mysqli_query($conn, "SELECT * from comments WHERE article_id = $article_id");
 
-		while($r = mysqli_fetch_assoc($result)) {
-		    $rows[] = $r;
+		if (mysqli_num_rows($asd)) {
+			while ($row = mysqli_fetch_assoc($asd)) {
+				print_r($row);
+			}
 		}
-		print_r(json_encode($rows));
 	}
 
 	function getFourArticlesByCategory($conn){
 
 		$category = $_GET['category'];
-		$query = "SELECT a.*, u.username
+
+		$query = mysqli_query($conn,"SELECT a.*, u.username
 		 from articles a 
 		 inner join users u on u.id = a.user_id
-		 WHERE a.id in (SELECT ac.article_id FROM categories c inner join articles_categories ac on ac.category_id = c.id WHERE c.name = '$category') LIMIT 4";
+		 WHERE a.id in (SELECT ac.article_id FROM categories c inner join articles_categories ac on ac.category_id = c.id WHERE c.name = '$category')");
 
-		$result = mysqli_query($conn, $query);
-
-		while($r = mysqli_fetch_assoc($result)) {
-		    $rows[] = $r;
+		if (mysqli_num_rows($query)) {
+			while ($row = mysqli_fetch_assoc($query)) {
+				print_r($row);
+			}
 		}
-		print_r(json_encode($rows));
 	}
 
 	function login($conn){
@@ -168,14 +154,7 @@
 		$message = $_POST['message'];
 		$created_at = date("Y-m-d h:i:s");
 
-		$query = "INSERT INTO messages (name,email,message,created_at) VALUES ('$name','$email','$message','$created_at');";
-
-		mysqli_query($conn, $query);
-
-		echo $query;
-
-		// header('Location: ' . "http://" . $_SERVER['HTTP_HOST'], true, 301);
-
+		mysqli_query($conn, "INSERT INTO messages (name,email,message,created_at) VALUES ('$name','$email','$message','$created_at');");
 	}
 
 	function updateArticle($conn){
@@ -195,13 +174,13 @@
 
 	function getMessages($conn){
 
-		$query = "SELECT * FROM messages;";
-		$result = mysqli_query($conn, $query);
+		$query = mysqli_query($conn,"SELECT * FROM messages;");
 
-		while($r = mysqli_fetch_assoc($result)) {
-		    $rows[] = $r;
+		if (mysqli_num_rows($query)) {
+			while ($row = mysqli_fetch_assoc($query)) {
+				print_r($row);
+			}
 		}
-		print_r(json_encode($rows));
 	}
 
 	function addComment($conn){
@@ -227,5 +206,6 @@
 
 		login($conn);
 	}
+	
 
 ?>
