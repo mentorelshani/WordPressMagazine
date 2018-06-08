@@ -6,8 +6,8 @@
 					<img src="./img/StarIcon.png" alt="" class="misc__list--icon">
 					<span class="misc__list--title">Misc.</span></li>
 				<li class="misc__list--item"><a href="login.php">Log in</a></li>
-				<li class="misc__list--item">Privacy of Policy</li>
-				<li class="misc__list--item">Get in touch</li>
+				<li class="misc__list--item"><a href="about.php">Privacy of Policy</a></li>
+				<li class="misc__list--item"><a href="about.php">Get in touch</a></li>
 			</ul>
 		</div>
 
@@ -17,13 +17,13 @@
 					<img src="./img/coffeeicon.png" alt="" class="links__list--icon">
 					<span class="links__list--title">Links:</span>
 				</li>
-				<li class="links__list--item">Design</li>
-				<li class="links__list--item">Freebies</li>
-				<li class="links__list--item">Inspiration</li>
-				<li class="links__list--item">Showcase</li>
-				<li class="links__list--item">Tutorials</li>
-				<li class="links__list--item">Graphics</li>
-				<li class="links__list--item">Wordpress</li>
+				<a href="/gallery.php?category=design"><li class="links__list--item">Design</li></a>
+				<a href="/gallery.php?category=freebies"><li class="links__list--item">Freebies</li></a>
+				<a href="/gallery.php?category=inspiration"><li class="links__list--item">Inspiration</li></a>
+				<a href="/gallery.php?category=showcase"><li class="links__list--item">Showcase</li></a>
+				<a href="/gallery.php?category=tutorials"><li class="links__list--item">Tutorials</li></a>
+				<a href="/gallery.php?category=graphics"><li class="links__list--item">Graphics</li></a>
+				<a href="/gallery.php?category=wordpress"><li class="links__list--item">Wordpress</li></a>
 			</ul>
 		</div>
 	</div>
@@ -61,20 +61,20 @@
 	<div class="messages footer__section">
 		<div class="messages__title">
 			<img class="messages__title--icon" src="./img/Icon.png" alt=" message">
-			<span class="messages__title--name">Get in wouch with us:</span>
+			<span class="messages__title--name">Get in touch with us:</span>
 		</div>
-		<form>
+		<form method="POST" action="back-end/functions.php?f=addMessage">
 			<div class="element">
 				<span class="name">Name:</span>
-				<input type="text" name="" class="value">
+				<input type="text" name="name" class="value">
 			</div>
 			<div class="element">
 				<span class="name">Email:</span>
-				<input type="text" name="" class="value">
+				<input type="text" name="email" class="value">
 			</div>
 			<div class="element">
 				<span class="name">Message:</span>
-				<textarea name="" class="value__textarea"></textarea>
+				<textarea name="message" class="value__textarea"></textarea>
 			</div>
 			<input type="submit" value="Submit" class="btn__submit">
 		</form>

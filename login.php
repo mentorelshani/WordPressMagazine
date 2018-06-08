@@ -46,18 +46,3 @@
 		}
 	}
 ?>
-=======
-<div class="login">
-	<form class="login__body">
-		<div class="element">
-			<span class="name">Username:</span>
-			<input type="text" name="" class="value" required>
-		</div>
-		<div class="element">
-			<span class="name">Password:</span>
-			<input type="password" name="" class="value">
-		</div>
-		<input type="submit" value="Login" class="btn__submit" required>
-	</form>
-</div>
->>>>>>> login and register

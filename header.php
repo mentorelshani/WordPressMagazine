@@ -5,12 +5,12 @@
 	</div>
 	<div class="menu">
 		<ul class="menu__items">
-			<li class="menu__item">Home</li>
-			<li class="menu__item">About</li>
-			<li class="menu__item">News</li>
-			<li class="menu__item">Gallery</li>
-			<li class="menu__item">Portfolio</li>
-			<li class="menu__item">Contact</li>
+			<a href="/"><li class="menu__item">Home</li></a>
+			<a href="/about.php"><li class="menu__item">About</li></a>
+			<a href="/gallery.php"><li class="menu__item">News</li></a>
+			<a href="/gallery.php"><li class="menu__item">Gallery</li></a>
+			<a href="/about.php"><li class="menu__item">Portfolio</li></a>
+			<a href="/about.php"><li class="menu__item">Contact</li></a>
 		</ul>
 	</div>
 </div>

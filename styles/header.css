@@ -41,7 +41,7 @@
 
 }
 
-.menu__items> .menu__item {
+.menu__items> a> .menu__item {
 	display: block;
 	/* width: 40px; */
 	color: white;
