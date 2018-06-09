@@ -1,3 +1,4 @@
+<script src="js/footer.js"></script>
 <div class="footer">
 	<div class="link footer__section">
 		<div class="misc">
