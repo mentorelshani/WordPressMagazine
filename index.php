@@ -10,8 +10,8 @@
 	<?php
 		include 'header.php';
 		include 'body.php';
-		include 'login.php';
-		include 'register.php';
+		// include 'login.php';
+		// include 'register.php';
 		include 'footer.php';
 		include 'footer_copyRight.php';
 	?>
