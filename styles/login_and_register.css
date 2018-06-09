@@ -5,7 +5,7 @@
 	padding-right: 30%;
 	padding-top: 40px;
 	padding-bottom: 40px;
-	color: black;
+	color: white;
 	background: linear-gradient(to right, rgb(9, 36, 50), rgb(55, 78, 90), rgb(10, 37, 51));
 }
 
@@ -28,4 +28,9 @@
 	margin-top: 30px;
 	margin-bottom: 30px;
 	font-weight: 500;
+	color: white;
+	background-color: rgb(19, 74, 101);
+}
+.error{
+    border-color: rgb(185, 74, 72) !important;
 }
