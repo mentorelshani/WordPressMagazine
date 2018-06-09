@@ -145,7 +145,7 @@ CREATE TABLE `messages` (
   `message` text NOT NULL,
   `created_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -154,7 +154,7 @@ CREATE TABLE `messages` (
 
 LOCK TABLES `messages` WRITE;
 /*!40000 ALTER TABLE `messages` DISABLE KEYS */;
-INSERT INTO `messages` VALUES (1,'MENTOR','user@gmail.com','message','2018-10-10 00:00:00'),(2,'User1','user@gmail.com','message','2018-10-10 00:00:00'),(3,'MENTOR','user@gmail.com','message','2018-10-10 00:00:00'),(4,'User2','user@gmail.com','message','2018-10-10 00:00:00'),(5,'Mentor','user@gmail.com','message','2018-10-10 00:00:00'),(6,'User1','user@gmail.com','message','2018-10-10 00:00:00'),(7,'User1','user@gmail.com','message','2018-10-10 00:00:00'),(8,'MENTOR','user@gmail.com','message','2018-10-10 00:00:00'),(9,'User2','user@gmail.com','message','2018-10-10 00:00:00'),(10,'Mentor','user@gmail.com','message','2018-10-10 00:00:00'),(11,'User1','user@gmail.com','message','2018-10-10 00:00:00'),(12,'mentorqwe','qwdas asdasd ','fsdfdsfsd','2018-06-02 04:21:04'),(13,'','','','2018-06-05 08:11:24'),(14,'','','','2018-06-08 07:46:29'),(15,'','','','2018-06-08 07:47:34'),(16,'','','','2018-06-08 07:48:01'),(17,'Mentir Bosi','user1@user1.com','Menta ','2018-06-08 07:48:15');
+INSERT INTO `messages` VALUES (1,'MENTOR','user@gmail.com','message','2018-10-10 00:00:00'),(2,'User1','user@gmail.com','message','2018-10-10 00:00:00'),(3,'MENTOR','user@gmail.com','message','2018-10-10 00:00:00'),(4,'User2','user@gmail.com','message','2018-10-10 00:00:00'),(5,'Mentor','user@gmail.com','message','2018-10-10 00:00:00'),(6,'User1','user@gmail.com','message','2018-10-10 00:00:00'),(7,'User1','user@gmail.com','message','2018-10-10 00:00:00'),(8,'MENTOR','user@gmail.com','message','2018-10-10 00:00:00'),(9,'User2','user@gmail.com','message','2018-10-10 00:00:00'),(10,'Mentor','user@gmail.com','message','2018-10-10 00:00:00'),(11,'User1','user@gmail.com','message','2018-10-10 00:00:00'),(12,'mentorqwe','qwdas asdasd ','fsdfdsfsd','2018-06-02 04:21:04'),(13,'','','','2018-06-05 08:11:24'),(14,'','','','2018-06-08 07:46:29'),(15,'','','','2018-06-08 07:47:34'),(16,'','','','2018-06-08 07:48:01'),(17,'Mentir Bosi','user1@user1.com','Menta ','2018-06-08 07:48:15'),(18,'','','','2018-06-10 01:12:31'),(19,'','','','2018-06-10 01:14:22');
 /*!40000 ALTER TABLE `messages` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,7 +182,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'mentor','men@asd.com','$argon2i$v=19$m=1024,t=2,p=2$WFhUUFIucy5razU5b1E3Vg$GqIRHQkWdq8SLnttpKgl5W3KnllHM/YQQt5flBSWBUk','2015-10-10 00:00:00','Admin'),(2,'mentor','men@asd.com','$argon2i$v=19$m=1024,t=2,p=2$WFhUUFIucy5razU5b1E3Vg$GqIRHQkWdq8SLnttpKgl5W3KnllHM/YQQt5flBSWBUk','2015-10-10 00:00:00','Admin'),(3,'mentori','men1@asd.com','$argon2i$v=19$m=1024,t=2,p=2$WFhUUFIucy5razU5b1E3Vg$GqIRHQkWdq8SLnttpKgl5W3KnllHM/YQQt5flBSWBUk','2015-10-10 00:00:00','Admin'),(4,'mentor','shum nice','$argon2i$v=19$m=1024,t=2,p=2$aVNQdFpIVlh4Wnovc0VlWA$7VZ4ga2MY6yKp70gLIZon4gHoZpEYQ/VT3cDhxOvQB8','2018-06-05 08:34:32','User'),(5,'mentor','shum nice','$argon2i$v=19$m=1024,t=2,p=2$VjdiMXFEYzVPbGk0RFFGYw$JJiYGH0lF6olKdKy7fnKhNSG6XR0x2ToVSOFZ6ixeH4','2018-06-05 08:40:49','User'),(6,'mentor','shum nice','$argon2i$v=19$m=1024,t=2,p=2$bGJPYzBWQlNveVRKZ1h5dA$wertMYqmsEg03ZF4yfLIpj6fBHCA4Cq7iK2qm4MVlU8','2018-06-05 08:41:22','User'),(7,'mentorwe','shum nicecv','$argon2i$v=19$m=1024,t=2,p=2$N096czRqRGhjLncuU0M1eQ$0uhJItKFVuxD4egpYBnErw8m67usGakOBbqXCAT336A','2018-06-05 08:42:45','User'),(8,'','','$argon2i$v=19$m=1024,t=2,p=2$N2c0Q0U1YXQ3UVVOaU1Kag$L3NrvY4pg0H1UyMlh4EJFlBTazd84gJ6R4e5dGhsMOs','2018-06-10 12:15:09','User'),(9,'dsas','dsad','$argon2i$v=19$m=1024,t=2,p=2$Z2pkWEZZRDUvZXJYSEx4Zg$bpZ/laJPBUuI+OQpBxTeu4UoSc636gTUd6Hquu9gbcE','2018-06-10 12:15:53','User'),(10,'dsadasads','admin@admin.com','$argon2i$v=19$m=1024,t=2,p=2$L2Q4SlFka1ZmOGM5bkFCUQ$6d9lOwsLIcJozzbAxKYvfenBSxllfD4tQRzJpRk/YKQ','2018-06-10 12:22:03','User');
+INSERT INTO `users` VALUES (1,'mentor','men@asd.com','$argon2i$v=19$m=1024,t=2,p=2$WFhUUFIucy5razU5b1E3Vg$GqIRHQkWdq8SLnttpKgl5W3KnllHM/YQQt5flBSWBUk','2015-10-10 00:00:00','Admin'),(2,'mentor','men@asd.com','$argon2i$v=19$m=1024,t=2,p=2$WFhUUFIucy5razU5b1E3Vg$GqIRHQkWdq8SLnttpKgl5W3KnllHM/YQQt5flBSWBUk','2015-10-10 00:00:00','Admin'),(3,'mentori','men1@asd.com','$argon2i$v=19$m=1024,t=2,p=2$WFhUUFIucy5razU5b1E3Vg$GqIRHQkWdq8SLnttpKgl5W3KnllHM/YQQt5flBSWBUk','2015-10-10 00:00:00','Admin'),(4,'mentor','shum nice','$argon2i$v=19$m=1024,t=2,p=2$aVNQdFpIVlh4Wnovc0VlWA$7VZ4ga2MY6yKp70gLIZon4gHoZpEYQ/VT3cDhxOvQB8','2018-06-05 08:34:32','User'),(5,'mentor','shum nice','$argon2i$v=19$m=1024,t=2,p=2$VjdiMXFEYzVPbGk0RFFGYw$JJiYGH0lF6olKdKy7fnKhNSG6XR0x2ToVSOFZ6ixeH4','2018-06-05 08:40:49','User'),(6,'mentor','shum nice','$argon2i$v=19$m=1024,t=2,p=2$bGJPYzBWQlNveVRKZ1h5dA$wertMYqmsEg03ZF4yfLIpj6fBHCA4Cq7iK2qm4MVlU8','2018-06-05 08:41:22','User'),(7,'mentorwe','shum nicecv','$argon2i$v=19$m=1024,t=2,p=2$N096czRqRGhjLncuU0M1eQ$0uhJItKFVuxD4egpYBnErw8m67usGakOBbqXCAT336A','2018-06-05 08:42:45','User'),(8,'dasasddsaads','dasasddsadsa','$argon2i$v=19$m=1024,t=2,p=2$N2c0Q0U1YXQ3UVVOaU1Kag$L3NrvY4pg0H1UyMlh4EJFlBTazd84gJ6R4e5dGhsMOs','2018-06-10 12:15:09','User'),(9,'dsas','dsad','$argon2i$v=19$m=1024,t=2,p=2$Z2pkWEZZRDUvZXJYSEx4Zg$bpZ/laJPBUuI+OQpBxTeu4UoSc636gTUd6Hquu9gbcE','2018-06-10 12:15:53','User'),(10,'dsadasads','admin@admin.com','$argon2i$v=19$m=1024,t=2,p=2$L2Q4SlFka1ZmOGM5bkFCUQ$6d9lOwsLIcJozzbAxKYvfenBSxllfD4tQRzJpRk/YKQ','2018-06-10 12:22:03','User');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -234,4 +234,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-10  1:08:34
+-- Dump completed on 2018-06-10  1:20:53
