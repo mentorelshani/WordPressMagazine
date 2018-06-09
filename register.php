@@ -41,4 +41,5 @@
 
 <?php
 	include 'footer.php';
+	include 'footer_copyRight.php';
 ?>

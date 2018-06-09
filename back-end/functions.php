@@ -173,9 +173,6 @@
 		$query = "INSERT INTO messages (name,email,message,created_at) VALUES ('$name','$email','$message','$created_at');";
 
 		mysqli_query($conn, $query);
-
-		echo $query;
-
 		// header('Location: ' . "http://" . $_SERVER['HTTP_HOST'], true, 301);
 	}
 
