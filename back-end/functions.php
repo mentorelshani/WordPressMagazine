@@ -71,7 +71,7 @@
 	function getComments($conn){
 
 		$article_id = $_GET['article_id'];
-		$query = "SELECT * from comments WHERE article_id = $article_id";
+		$query = "SELECT c.*, u.username FROM comments c INNER JOIN users u on u.id = c.user_id WHERE article_id = $article_id";
 
 		$result = mysqli_query($conn, $query);
 
