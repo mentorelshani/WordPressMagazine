@@ -31,9 +31,12 @@
 		$category = $_GET['category'];
 		$text = $_GET['text'];
 		$query = "SELECT * FROM articles
-		 where title like '%$text%' or body like '%$text%'
+		 where (title like '%$text%' or body like '%$text%')
 		 and id in (SELECT ac.article_id FROM categories c inner join articles_categories ac on ac.category_id = c.id WHERE c.name = '$category')
 		order by created_at;";
+		if($_GET['category'] =="all"){
+			$query ="SELECT * FROM articles where (title like '%$text%' or body like '%$text%')";
+		}
 	}
 	else if (isset($_GET['category'])) {
 		$category = $_GET['category'];
@@ -62,7 +65,7 @@
 				<a style="text-decoration:none;color:black" href="<?php echo 'article.php?'.$r['id']; ?> "><span class="article__title"><?php echo $r['title']; ?></span></a>
 
 				<div class="article__photo">
-					<img src="<?php echo $r['img']; ?>" alt="">
+					<img src="<?php echo 'img/' . $r['img']; ?>" alt="">
 				</div>
 				<span class="article__description"><?php echo $r['created_at']."by:".$r['user_id'];?></span>
 				<span class="article__content"><?php echo $r['body'] ?><a style="text-decoration:none;color:black" href="<?php echo 'article.php?'.$r['id']; ?> "> [...]</a>

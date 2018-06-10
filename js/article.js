@@ -4,9 +4,9 @@ $(document).ready(function(){
 		lang: 'en'
 	});
 
-	$(window).keydown(function(event){
+	$("#form3").keydown(function(event){
 		if(event.keyCode == 13) {
-	    	event.preventDefault();
+    		submit();
 	    }
 	});
 
@@ -32,6 +32,7 @@ function submit(){
 	        data: values ,
 	        success: function (response) {
 	        	swal(response);
+	        	// location.reload();
 	        }
 	    });
 }

@@ -24,6 +24,18 @@
 		print_r(json_encode($rows));
 	}
 
+	function getAllArticles($conn){
+
+		$query = 'SELECT * from v_articles ORDER BY created_at';
+
+		$result = mysqli_query($conn, $query);
+
+		while($r = mysqli_fetch_assoc($result)) {
+		    $rows[] = $r;
+		}
+		print_r(json_encode($rows));
+	}
+
 	function searchArticles($conn){
 
 		$text = $_GET['text'];
@@ -135,7 +147,8 @@
 
 	function logout($conn){
 
-		session_destroy(); 
+		session_destroy();
+		header('Location: ' . "http://" . $_SERVER['HTTP_HOST'], true, 301);
 	}
 
 	function addArticle($conn){
