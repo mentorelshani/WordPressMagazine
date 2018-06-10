@@ -71,7 +71,7 @@
 	function getComments($conn){
 
 		$article_id = $_GET['article_id'];
-		$query = "SELECT * from comments WHERE article_id = $article_id";
+		$query = "SELECT c.*, u.username FROM comments c INNER JOIN users u on u.id = c.user_id WHERE article_id = $article_id";
 
 		$result = mysqli_query($conn, $query);
 
@@ -113,7 +113,6 @@
 				if(password_verify($password,$a)){
 					$_SESSION['user'] = $row;
 					echo "ok";
-					// header('Location: ' . "http://" . $_SERVER['HTTP_HOST'], true, 301);
 				}
 				else{
 					echo "wrong password";
@@ -172,8 +171,11 @@
 
 		$query = "INSERT INTO messages (name,email,message,created_at) VALUES ('$name','$email','$message','$created_at');";
 
-		mysqli_query($conn, $query);
-		// header('Location: ' . "http://" . $_SERVER['HTTP_HOST'], true, 301);
+		if ($name != "" && $email != "" && $message != "") {
+			mysqli_query($conn, $query);
+		}
+
+		header('Location: ' . "http://" . $_SERVER['HTTP_HOST'], true, 301);
 	}
 
 	function updateArticle($conn){
@@ -209,7 +211,13 @@
 		$comment = $_POST['comment'];
 		$created_at = date("Y-m-d h:i:s");
 
+		if ($comment == "") {
+			echo "Please add a comment.";
+			return;
+		}
+
 		mysqli_query($conn, "INSERT INTO comments (user_id,article_id,comment,created_at) VALUES ($user_id,$article_id,'$comment','$created_at');");
+		echo "Comment successfully added.";
 	}
 
 	function register($conn){
@@ -221,14 +229,30 @@
 		$hash_password = password_hash($password,2);
 		$created_at = date("Y-m-d h:i:s");
 
+		if (strlen($username) < 6){
+			echo "Username must have at least 6 characters.";
+			return;
+		}
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			echo "Invalid email format.";
+			return;
+		}
+		if (strlen($password) < 8){
+			echo "Password must have at least 8 characters.";
+			return;
+		}
+			
+
 		$query = mysqli_query($conn,"SELECT * FROM users WHERE username = '$username';");
 
 		if (mysqli_num_rows($query)) {
-			echo "username taken";
+			echo "Username is taken.";
 			return;
 		}
 
-		mysqli_query($conn, "INSERT INTO users (username,email,hash_password,created_at,role) VALUES ('$username','$email','$hash_password','$created_at','$role');");
+		$query2 = "INSERT INTO users (username,email,hash_password,created_at,role) VALUES ('$username','$email','$hash_password','$created_at','$role');";
+
+		mysqli_query($conn, $query2);
 
 		login($conn);
 	}
