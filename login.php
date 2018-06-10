@@ -1,8 +1,9 @@
 <?php
 	session_start();
 	if(isset($_SESSION['user'])){
-		$_SESSION['user'] = $row;
-		header('Location: ' . "http://" . $_SERVER['HTTP_HOST'], true, 301);
+		print_r($_SESSION['user']);
+
+		// header('Location: ' . "http://" . $_SERVER['HTTP_HOST'], true, 301);
 	}
 ?>
 
@@ -18,14 +19,14 @@
 <body>
 	<?php include 'header.php';?>
 	<div class="login">
-		<form class="login__body" method="POST" id="form">
+		<form class="login__body" id="form">
 			<div class="element" id="user_div">
 				<span class="name">Username:</span>
-				<input data-validation="required" id="user_input" type="text" name="username" class="value">
+				<input data-validation="required" id="user_input" type="text" name="username" class="value" required>
 			</div>
 			<div class="element" id="pass_div">
 				<span class="name">Password:</span>
-				<input data-validation="required" id="pass_input" type="password" name="password" class="value">
+				<input data-validation="required" id="pass_input" type="password" name="password" class="value" required>
 			</div>
 			<input type="button" value="Login" class="btn__submit" id="button1">
 		</form>

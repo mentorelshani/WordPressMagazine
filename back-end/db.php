@@ -2,7 +2,7 @@
 
 	$servername = "localhost";
 	$username = "root";
-	$password = "1296";
+	$password = "pass123";
 	$db = 'projekti_web';
 
 	// Create connection

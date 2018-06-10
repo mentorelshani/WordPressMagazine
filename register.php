@@ -13,6 +13,8 @@
 	<link rel="stylesheet" type="text/css" href="./styles/index.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+	<script src="js/sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/sweetalert.css">
 	<script src="js/register.js"></script>
 </head>
 <body>
@@ -21,11 +23,11 @@
 	<form class="register__body login__body" id="form2">
 		<div class="element" id="user_div">
 			<span class="name">Username:</span>
-			<input data-validation="length alphanumeric" data-validation-length="min6" id="user" type="text" name="username" class="value">
+			<input data-validation="length alphanumeric" data-validation-length="min6" id="user" type="text" name="username" class="value" required>
 		</div>
 		<div class="element">
 			<span class="name">Email:</span>
-			<input data-validation="email" type="email" name="email" class="value">
+			<input type="email" name="email" class="value">
 		</div>
 		<div class="element">
 			<span class="name">Password:</span>

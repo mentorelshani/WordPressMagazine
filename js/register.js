@@ -16,19 +16,15 @@ $(document).ready(function(){
 });
 
 function submit(){
-
-	$('.spans').remove();
-    var element = document.getElementById("pass2");
-    element.classList.add("valid");
-    element.classList.remove("error");
-    element = document.getElementById("user");
-    element.classList.add("valid");
-    element.classList.remove("error");
     
 	var pass1 = document.getElementById('pass1').value;
 	var pass2 = document.getElementById('pass2').value;
 	if (pass1 != pass2) {
-		wrongConfirm();
+  		swal({
+		 	type: 'error',
+			title: 'Oops...',
+			text: 'Passwords didn\'t match.',
+			})
 		return;
 	}
 	 var values = $("#form2").serialize();
@@ -37,28 +33,17 @@ function submit(){
 	        type: "post",
 	        data: values ,
 	        success: function (response) {
-	        	if (response == "username taken") {
-	        		usernameTaken();
+	        	if (response == "ok") {
+	        		window.location.href = '/';
 	        	}
 	        	else{
-	        		window.location.href = '/';
+	        		swal({
+					  type: 'error',
+					  title: 'Oops...',
+					  text: response,
+					})
+	        		// swal(response);
 	        	}
 	        }
 	    });
-}
-
-function wrongConfirm(){
-
-	$("#confirm_div").append('<span class="help-block form-error spans">Passwords didn\'t match.</span>');
-    var element = document.getElementById("pass2");
-    element.classList.add("error");
-    element.classList.remove("valid");
-}
-
-function usernameTaken(){
-	
-	$("#user_div").append('<span class="help-block form-error spans">Username is already taken.</span>');
-    var element = document.getElementById("user");
-    element.classList.add("error");
-    element.classList.remove("valid");
 }
