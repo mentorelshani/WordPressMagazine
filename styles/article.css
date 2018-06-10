@@ -3,13 +3,13 @@
 	padding: 40px 100px;
 	float: left;
     background: linear-gradient(to right, rgb(9, 36, 50), rgb(55, 78, 90), rgb(10, 37, 51));
-
 }
 
 .article__details-photo {
 	width: 50%;
 	float: left;
 }
+
 .article__details-photo__style {
 	width: calc( 100% - 40px );
 	float: left;
