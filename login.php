@@ -5,44 +5,34 @@
 		header('Location: ' . "http://" . $_SERVER['HTTP_HOST'], true, 301);
 	}
 ?>
-<div class="login">
-	<form class="login__body" method="post">
-		<div class="element">
-			<span class="name">Username:</span>
-			<input type="text" name="" class="value" required>
-		</div>
-		<div class="element">
-			<span class="name">Password:</span>
-			<input type="password" name="" class="value">
-		</div>
-		<input type="submit" value="Login" class="btn__submit" required>
-	</form>
-</div>
-<?php 
 
-	if (isset($_POST['username'])) {
-
-		include 'db.php';
-
-		$username = $_POST['username'];
-		$password = $_POST['password'];
-
-		$query = mysqli_query($conn,"SELECT * FROM users WHERE username = '$username';");
-
-		if (mysqli_num_rows($query)) {
-			while ($row = mysqli_fetch_assoc($query)) {
-				$a = $row['hash_password'];
-				if(password_verify($password,$a)){
-					$_SESSION['user'] = $row;
-					header('Location: ' . "http://" . $_SERVER['HTTP_HOST'], true, 301);
-				}
-				else{
-					echo "wrong password";
-				}
-			}
-		}
-		else{
-			echo "wrong username";
-		}
-	}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magazine</title>
+	<link rel="stylesheet" type="text/css" href="./styles/index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+	<script src="js/login.js"></script>
+</head>
+<body>
+	<?php include 'header.php';?>
+	<div class="login">
+		<form class="login__body" method="POST" id="form">
+			<div class="element" id="user_div">
+				<span class="name">Username:</span>
+				<input data-validation="required" id="user_input" type="text" name="username" class="value">
+			</div>
+			<div class="element" id="pass_div">
+				<span class="name">Password:</span>
+				<input data-validation="required" id="pass_input" type="password" name="password" class="value">
+			</div>
+			<input type="button" value="Login" class="btn__submit" id="button1">
+		</form>
+	</div>
+<?php
+	include 'footer.php';
+	include 'footer_copyRight.php';
 ?>
+</body>
+</html>

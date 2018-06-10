@@ -110,15 +110,17 @@
 					$a = $row['hash_password'];
 					break;
 				}
+				if(password_verify($password,$a)){
+					$_SESSION['user'] = $row;
+					echo "ok";
+					// header('Location: ' . "http://" . $_SERVER['HTTP_HOST'], true, 301);
+				}
+				else{
+					echo "wrong password";
+				}
 			}
-
-			if(password_verify($password,$a)){
-				$_SESSION['user'] = $row;
-				header('Location: ' . "http://" . $_SERVER['HTTP_HOST'], true, 301);
-			}
-			else{
-				echo "wrong password";
-			}
+			else
+				echo "wrong username";
 			return;
 		}
 	}
@@ -171,9 +173,6 @@
 		$query = "INSERT INTO messages (name,email,message,created_at) VALUES ('$name','$email','$message','$created_at');";
 
 		mysqli_query($conn, $query);
-
-		echo $query;
-
 		// header('Location: ' . "http://" . $_SERVER['HTTP_HOST'], true, 301);
 	}
 
@@ -221,6 +220,13 @@
 		$role = "User";
 		$hash_password = password_hash($password,2);
 		$created_at = date("Y-m-d h:i:s");
+
+		$query = mysqli_query($conn,"SELECT * FROM users WHERE username = '$username';");
+
+		if (mysqli_num_rows($query)) {
+			echo "username taken";
+			return;
+		}
 
 		mysqli_query($conn, "INSERT INTO users (username,email,hash_password,created_at,role) VALUES ('$username','$email','$hash_password','$created_at','$role');");
 
